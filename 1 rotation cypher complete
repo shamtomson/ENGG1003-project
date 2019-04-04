@@ -16,7 +16,7 @@ int length;
 length = strlen(n);
 
 if(i == 0; i <= n; i++){
-    inputtext[i] = inputtext[i] - rot;
+    inputtext[i] = inputtext[i] - rot; //will work for any rotation < 26
     printf("%c", inputtext[i]);
 }
 
