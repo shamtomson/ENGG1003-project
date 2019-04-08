@@ -14,11 +14,15 @@ scanf("%s", inputtext);
  
 int length;
 length = strlen(inputtext);
+printf("%d", length);
 
-if(i == 0 && i <= length && i++){
-    inputtext[i] = inputtext[i] - rot; //will work for any rotation < 26
-    printf("%c", inputtext[i]);
-}
+char l;
+
+if(i == 0 && i <= length){
+    l = inputtext[i] - rot;
+    printf("%c", l);
+    i++; //will work for any rotation < 26
+} 
 
 return 0;
 }
