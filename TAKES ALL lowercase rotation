@@ -19,16 +19,11 @@ int i = 0;
 char letter = 1;
 printf("The inputtext: %s\nWith rotation %d is:\n", inputtext, rot);
 while(i < length){
-        if((inputtext[i] - rot > 113) && (inputtext[i] - rot < 90)){ //target lowercase
+        if((inputtext[i] - rot < 97) && (inputtext[i] - rot > 71)){
             letter = inputtext[i] + (26 - rot);
             printf("%c", letter);
             i++;
         }
-        else if((inputtext[i] - rot < 97) && (inputtext[i] - rot > 71)){
-            letter = inputtext[i] + (26 - rot);
-            printf("%c", letter);
-            i++;
-        } 
         else {
             letter = inputtext[i] - rot; //only while not whitespace
             printf("%c", letter);
