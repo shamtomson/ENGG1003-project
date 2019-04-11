@@ -7,18 +7,23 @@ int rot; // 'rot' for rotation
 printf("enter the rotation amount:\n");
 scanf("%d", &rot);
 
-int i = 0
-const char inputtext[i];
-printf("enter the input text\n");
+
+char inputtext[1023];
+printf("Enter the input text\n");
 scanf("%s", inputtext);
  
 int length;
-length = strlen(n);
+length = strlen(inputtext);
+printf("The length is %d\n", length);
 
-if(i == 0; i <= n; i++){
-    inputtext[i] = inputtext[i] - rot; //will work for any rotation < 26
-    printf("%c", inputtext[i]);
-}
+int i = 0;
+char letter = 1;
+
+while(i < length){
+    letter = inputtext[i] - rot;
+    printf("%c", letter);
+    i = i + 1;
+} 
 
 return 0;
 }
