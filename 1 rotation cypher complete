@@ -4,26 +4,27 @@
 int main() {
 
 int rot; // 'rot' for rotation
-printf("enter the rotation amount:\n");
+printf("Enter the rotation amount:\n");
 scanf("%d", &rot);
 
-
-char inputtext[1023];
 printf("Enter the input text\n");
-scanf("%s", inputtext);
+const char inputtext[1023];
+gets(inputtext); 
+scanf("%[^\n]s", inputtext);
  
 int length;
 length = strlen(inputtext);
-printf("The length is %d\n", length);
 
 int i = 0;
 char letter = 1;
-
+printf("The inputtext: %s\nWith rotation %d is:\n", inputtext, rot);
 while(i < length){
-    letter = inputtext[i] - rot;
-    printf("%c", letter);
-    i = i + 1;
-} 
-
+        letter = inputtext[i] - rot; //only while not whitespace
+        printf("%c", letter);
+        i++;
+        if(inputtext[i]==32){
+        printf(" ");
+        }
+}
 return 0;
 }
